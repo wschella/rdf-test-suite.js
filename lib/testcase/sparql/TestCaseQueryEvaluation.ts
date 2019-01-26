@@ -5,7 +5,7 @@ import {stringToTerm} from "rdf-string";
 import {mapTerms, QuadTermName} from "rdf-terms";
 import {SparqlJsonParser} from "sparqljson-parse";
 import {SparqlXmlParser} from "sparqlxml-parse";
-import {Util, IFetchResponse} from "../../Util";
+import {IFetchResponse, Util} from "../../Util";
 import {ITestCaseData} from "../ITestCase";
 import {ITestCaseHandler} from "../ITestCaseHandler";
 import {IQueryEngine, IQueryResult, IQueryResultBindings} from "./IQueryEngine";
@@ -283,6 +283,8 @@ export class TestCaseQueryEvaluation implements ITestCaseSparql {
   Data: ${this.dataUri || 'none'}${dataGraphInfo}
 
   Result Source: ${this.resultSource.url}
+
+  Data: ${this.dataUri || 'none'}${dataGraphInfo})
 
   Expected: ${this.queryResult.toString()}
 
